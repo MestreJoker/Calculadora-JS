@@ -1,207 +1,222 @@
 * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: rgb(130, 220, 255);
-        }
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(130, 220, 255);
+}
 
-        main {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 30px;
-            background-color: rgb(250, 204, 77);
-            gap: 15px;
-            border-radius: 25px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        }
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: rgb(250, 204, 77);
+    gap: 15px;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
 
-        #titulo {
-            color: #574b4b;
-            font-weight: bold;
-            font-size: 20px;
-            margin-top: -10px;
-        }
+#titulo {
+    color: #574b4b;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -10px;
+}
 
-        #visor {
-            width: 100%;
-            height: 80px;
-        }
+#visor {
+    width: 100%;
+    height: 80px;
+}
 
-        input {
-            width: 100%;
-            height: 100%;
-            border-radius: 20px;
-            border: 1px solid black;
-            text-align: right;
-            font-size: 30px;
-            display: block;
-            padding-right: 9px;
-        }
+input {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 1px solid black;
+    text-align: right;
+    font-size: 30px;
+    display: block;
+    padding-right: 9px;
+}
 
-        .botoes {
-            display: grid;
-            grid-template-areas:
-                "btC btCE btDivisao btMultiplicacao"
-                "bt7 bt8 bt9 btSubtracao"
-                "bt4 bt5 bt6 btAdicao"
-                "bt1 bt2 bt3 btIgual"
-                "bt0 bt0 btPonto btIgual";
-            grid-template-rows: 57px 57px 57px 57px 57px;
-            grid-template-columns: 79px 79px 79px 79px;
-            gap: 11px;
-        }
+.botoes {
+    display: grid;
+    grid-template-areas:
+        "btC btCE btDivisao btMultiplicacao"
+        "bt7 bt8 bt9 btSubtracao"
+        "bt4 bt5 bt6 btAdicao"
+        "bt1 bt2 bt3 btIgual"
+        "bt0 bt0 btPonto btIgual";
+    grid-template-rows: 57px 57px 57px 57px 57px;
+    grid-template-columns: 79px 79px 79px 79px;
+    gap: 11px;
+}
 
-        .botoes div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgb(245, 245, 245);
-            border-radius: 10px;
-            font-size: 20px;
-            font-weight: bold;
-            box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.2),
-                0 4px 6px rgba(0, 0, 0, 0.3);
-            transition: all 0.03s ease-in-out;
-        }
+.botoes div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.2),
+        0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.03s ease-in-out;
+}
 
-        .botoes div:active {
-            transform: translateY(2px);
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
+.botoes div:active {
+    transform: translateY(2px);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
 
-        .botoes div:hover {
-            background-color: rgb(219, 219, 219);
-            cursor: pointer;
-        }
+.botoes div:hover {
+    background-color: rgb(219, 219, 219);
+    cursor: pointer;
+}
 
-        .botoes .btFunc:hover {
-            background-color: #574b4b;
-            cursor: pointer;
-        }
+.botoes .btFunc:hover {
+    background-color: #574b4b;
+    cursor: pointer;
+}
 
-        .botoes .btFunc {
-            background-color: #928686;
-            color: white;
-        }
+.botoes .btFunc {
+    background-color: #928686;
+    color: white;
+}
 
-        #btC {
-            grid-area: btC;
-        }
+#btC {
+    grid-area: btC;
+}
 
-        #btCE {
-            grid-area: btCE;
-        }
+#btCE {
+    grid-area: btCE;
+}
 
-        #btDivisao {
-            grid-area: btDivisao;
-        }
+#btDivisao {
+    grid-area: btDivisao;
+}
 
-        #btMultiplicacao {
-            grid-area: btMultiplicacao;
-        }
+#btMultiplicacao {
+    grid-area: btMultiplicacao;
+}
 
-        #bt7 {
-            grid-area: bt7;
-        }
+#bt7 {
+    grid-area: bt7;
+}
 
-        #bt8 {
-            grid-area: bt8;
-        }
+#bt8 {
+    grid-area: bt8;
+}
 
-        #bt9 {
-            grid-area: bt9;
-        }
+#bt9 {
+    grid-area: bt9;
+}
 
-        #btSubtracao {
-            grid-area: btSubtracao;
-        }
+#btSubtracao {
+    grid-area: btSubtracao;
+}
 
-        #bt4 {
-            grid-area: bt4;
-        }
+#bt4 {
+    grid-area: bt4;
+}
 
-        #bt5 {
-            grid-area: bt5;
-        }
+#bt5 {
+    grid-area: bt5;
+}
 
-        #bt6 {
-            grid-area: bt6;
-        }
+#bt6 {
+    grid-area: bt6;
+}
 
-        #btAdicao {
-            grid-area: btAdicao;
-        }
+#btAdicao {
+    grid-area: btAdicao;
+}
 
-        #bt1 {
-            grid-area: bt1;
-        }
+#bt1 {
+    grid-area: bt1;
+}
 
-        #bt2 {
-            grid-area: bt2;
-        }
+#bt2 {
+    grid-area: bt2;
+}
 
-        #bt3 {
-            grid-area: bt3;
-        }
+#bt3 {
+    grid-area: bt3;
+}
 
-        #btIgual {
-            grid-area: btIgual;
-        }
+#btIgual {
+    grid-area: btIgual;
+}
 
-        #bt0 {
-            grid-area: bt0;
-        }
+#bt0 {
+    grid-area: bt0;
+}
 
-        #btPonto {
-            grid-area: btPonto;
-        }
+#btPonto {
+    grid-area: btPonto;
+}
 
-        @media (max-width: 480px){
-            main{
-                height: 100%;
-                width: 100%;
-                border-radius: 0;
-                padding: 0px;
-                background-color: rgb(247, 254, 255);
-            }
-            #titulo{
-                display: none;
-            }
-            #visor{
-                height: 100%;
-            }
-            input{
-                background-color: rgb(247, 254, 255);
-                border-radius: 0;
-                border: none;
-                font-size: 3em;
-                padding-left: 30px;
-                padding-right: 30px;
-            }
-            .botoes {
-            display: grid;
-            grid-template-areas:
-                "btC btCE btDivisao btMultiplicacao"
-                "bt7 bt8 bt9 btSubtracao"
-                "bt4 bt5 bt6 btAdicao"
-                "bt1 bt2 bt3 btIgual"
-                "bt0 bt0 btPonto btIgual";
-            grid-template-rows: 70px 70px 70px 70px 70px;
-            grid-template-columns: 92px 92px 92px 92px;
-            gap: 7px;
-            position: relative;
-            margin-top: auto;
-            padding-bottom: 20px;
-            flex-grow: 1;
-        }
-        }
+@media (max-width: 480px) {
+    body{
+        overflow-y: hidden;
+        background-color: rgb(247, 254, 255);
+    }
+    main {
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        padding: 0px;
+        background-color: transparent
+    }
+
+    #titulo {
+        display: none;
+    }
+
+    #visor {
+        height: 100%;
+    }
+
+    input {
+        background-color: transparent;
+        border-radius: 0;
+        border: none;
+        font-size: 5em;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .botoes {
+        display: grid;
+        grid-template-areas:
+            "btC btCE btDivisao btMultiplicacao"
+            "bt7 bt8 bt9 btSubtracao"
+            "bt4 bt5 bt6 btAdicao"
+            "bt1 bt2 bt3 btIgual"
+            "bt0 bt0 btPonto btIgual";
+        grid-template-rows: 70px 70px 70px 70px 70px;
+        grid-template-columns: 92px 92px 92px 92px;
+        gap: 7px;
+        position: relative;
+        margin-top: auto;
+        padding-bottom: 70px;
+        flex-grow: 1;
+    }
+}
+
+@media (max-width: 380px) {
+    .botoes {
+        grid-template-rows: 70px 70px 70px 70px 70px;
+        grid-template-columns: 85px 85px 85px 85px;
+    }
+}
