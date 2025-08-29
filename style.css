@@ -165,3 +165,43 @@
         #btPonto {
             grid-area: btPonto;
         }
+
+        @media (max-width: 480px){
+            main{
+                height: 100%;
+                width: 100%;
+                border-radius: 0;
+                padding: 0px;
+                background-color: rgb(247, 254, 255);
+            }
+            #titulo{
+                display: none;
+            }
+            #visor{
+                height: 100%;
+            }
+            input{
+                background-color: rgb(247, 254, 255);
+                border-radius: 0;
+                border: none;
+                font-size: 3em;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            .botoes {
+            display: grid;
+            grid-template-areas:
+                "btC btCE btDivisao btMultiplicacao"
+                "bt7 bt8 bt9 btSubtracao"
+                "bt4 bt5 bt6 btAdicao"
+                "bt1 bt2 bt3 btIgual"
+                "bt0 bt0 btPonto btIgual";
+            grid-template-rows: 70px 70px 70px 70px 70px;
+            grid-template-columns: 92px 92px 92px 92px;
+            gap: 7px;
+            position: relative;
+            margin-top: auto;
+            padding-bottom: 20px;
+            flex-grow: 1;
+        }
+        }
