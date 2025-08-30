@@ -182,7 +182,9 @@ input {
     #titulo {
         padding-top: 20px
     }
-
+    #titulo::after{
+        content: " (Mobile)";
+    }
     #visor {
         height: 100%;
     }
