@@ -13,10 +13,10 @@ Feedback visual ao clicar nos botões.
 HTML5: Estrutura básica da página.
 CSS3: Estilização com Grid para layout e media queries para responsividade.
 JavaScript: Lógica para cálculos e manipulação do DOM.
-
+<br><br><br>
 <p>Desktop:</p>
 <img width="1234" height="602" alt="image" src="https://github.com/user-attachments/assets/dffa2cb8-f398-4a74-b41d-acceda8616ab" />
 <br><br>
-<p>Mobile</p>
+<p>Mobile:</p>
 <img width="414" height="896" alt="image" src="https://github.com/user-attachments/assets/66dbbc5b-eedf-488e-a74c-f459231d78bb" />
 
