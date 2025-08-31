@@ -1,6 +1,6 @@
 <h3>Veja o site em:</h3>
 <p>mestrejoker.github.io/Calculadora-JS</p>
-
+<hr>
 Bem-vindo ao meu projeto de Calculadora! Este é um aplicativo web simples e responsivo criado por Gabriel dos Santos Gomes como parte do meu aprendizado em desenvolvimento front-end.
 Descrição
 Esta calculadora permite realizar operações básicas como adição, subtração, multiplicação e divisão. Ela inclui um visor interativo e suporta cálculos responsivos em dispositivos móveis e desktops, com um design intuitivo e funcional.
