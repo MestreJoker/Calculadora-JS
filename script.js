@@ -6,43 +6,37 @@ let podeColocarPonto = true
 
 //Números
 for(let i = 0; i<=9; i++){
-    section.innerHTML+= `<div id="bt${i}" onclick="clickBt(${i})">${i}</div>`
+    section.innerHTML+= `<div id="bt${i}" onclick="clickBtNumero(${i})">${i}</div>`
 }
 
-function clickBt(numero){
+function clickBtNumero(numero){
     if (visor.value.endsWith("por 0") || visor.value.endsWith("expressão")) {
         resetarTexto()
     }
-    visor.value += String(numero)
+    visor.value += numero
     podeColocarSinal = true
 }
 
-//Sinais
+//Sinais (+, *, /)
+function clickBtSinal(sinal){
+     if (podeColocarSinal == true && visor.value !== "" && !visor.value.endsWith(" ") && !visor.value.endsWith("por 0")) {
+        visor.value += sinal
+        podeColocarPonto = true
+        podeColocarSinal = false
+    }
+    
+}
 
+//Subtração
 function clickBtSubtracao(params) {
-    if (!visor.value.endsWith("por 0") && !visor.value.endsWith(". ")) {
+    if (!visor.value.endsWith("por 0") && !visor.value.endsWith(".")) {
         visor.value += " - "
         podeColocarSinal = false
         podeColocarPonto = true
     }
 }
 
-function clickBtPonto(params) {
-    if (podeColocarPonto == true && visor.value !== "" && !visor.value.endsWith(" ") && !visor.value.endsWith("por 0")) {
-        visor.value += "."
-        podeColocarPonto = false
-        podeColocarSinal = false
-    }
-}
-
-function clickBtSinal(sinal){
-     if (podeColocarPonto == true && visor.value !== "" && !visor.value.endsWith(" ") && !visor.value.endsWith("por 0")) {
-        visor.value += sinal
-        podeColocarPonto = true
-        podeColocarSinal = false
-    }
-}
-
+//Botões func
 function clickBtC() {
     resetarTexto()
     podeColocarPonto = true
@@ -85,6 +79,15 @@ function clickBtIgual(params) {
     }
 }
 
+function clickBtPonto(params) {
+    if (podeColocarPonto == true && visor.value !== "" && !visor.value.endsWith(" ") && !visor.value.endsWith("por 0")) {
+        visor.value += "."
+        podeColocarPonto = false
+        podeColocarSinal = false
+    }
+}
+
+//Resetando valores
 function resetarTexto() {
     visor.value = ""
     visor.style.color = "black"
