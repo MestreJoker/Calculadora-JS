@@ -13,7 +13,7 @@ function clickBt(numero){
     if (visor.value.endsWith("por 0") || visor.value.endsWith("expressão")) {
         resetarTexto()
     }
-    visor.value += numero
+    visor.value += String(numero)
     podeColocarSinal = true
 }
 
@@ -38,7 +38,7 @@ function clickBtPonto(params) {
 function clickBtSinal(sinal){
      if (podeColocarPonto == true && visor.value !== "" && !visor.value.endsWith(" ") && !visor.value.endsWith("por 0")) {
         visor.value += sinal
-        podeColocarPonto = false
+        podeColocarPonto = true
         podeColocarSinal = false
     }
 }
